@@ -1,0 +1,59 @@
+// ============== CONFIGURACIÓN DE PINES (VERSIÓN FINAL) ==============
+// Display en banco IOB/IOR (3.3V) - sin transistores
+// Reset usa botón S1 integrado en la TangNano (pin 88)
+
+// --- RELOJ ---
+IO_LOC "clk_27mhz" 52;
+
+// --- DISPLAY: SEGMENTOS (con resistencia 150Ω) ---
+IO_LOC  "segmentos_out[0]" 36;   // seg a → display pin 11
+IO_PORT "segmentos_out[0]" IO_TYPE=LVCMOS33 DRIVE=8 SLEW_RATE=SLOW;
+IO_LOC  "segmentos_out[1]" 25;   // seg b → display pin 7
+IO_PORT "segmentos_out[1]" IO_TYPE=LVCMOS33 DRIVE=8 SLEW_RATE=SLOW;
+IO_LOC  "segmentos_out[2]" 30;   // seg c → display pin 4
+IO_PORT "segmentos_out[2]" IO_TYPE=LVCMOS33 DRIVE=8 SLEW_RATE=SLOW;
+IO_LOC  "segmentos_out[3]" 29;   // seg d → display pin 2
+IO_PORT "segmentos_out[3]" IO_TYPE=LVCMOS33 DRIVE=8 SLEW_RATE=SLOW;
+IO_LOC  "segmentos_out[4]" 28;   // seg e → display pin 1
+IO_PORT "segmentos_out[4]" IO_TYPE=LVCMOS33 DRIVE=8 SLEW_RATE=SLOW;
+IO_LOC  "segmentos_out[5]" 39;   // seg f → display pin 10
+IO_PORT "segmentos_out[5]" IO_TYPE=LVCMOS33 DRIVE=8 SLEW_RATE=SLOW;
+IO_LOC  "segmentos_out[6]" 33;   // seg g → display pin 5
+IO_PORT "segmentos_out[6]" IO_TYPE=LVCMOS33 DRIVE=8 SLEW_RATE=SLOW;
+IO_LOC  "segmentos_out[7]" 35;   // dp → no conectado
+IO_PORT "segmentos_out[7]" IO_TYPE=LVCMOS33 DRIVE=8 SLEW_RATE=SLOW;
+
+// --- DISPLAY: ÁNODOS (sin resistencia) ---
+IO_LOC  "anodos_out[0]" 37;      // Ánodo D1 → display pin 12
+IO_PORT "anodos_out[0]" IO_TYPE=LVCMOS33 DRIVE=8 SLEW_RATE=SLOW;
+IO_LOC  "anodos_out[1]" 26;      // Ánodo D2 → display pin 9
+IO_PORT "anodos_out[1]" IO_TYPE=LVCMOS33 DRIVE=8 SLEW_RATE=SLOW;
+IO_LOC  "anodos_out[2]" 27;      // Ánodo D3 → display pin 8
+IO_PORT "anodos_out[2]" IO_TYPE=LVCMOS33 DRIVE=8 SLEW_RATE=SLOW;
+IO_LOC  "anodos_out[3]" 34;      // Ánodo D4 → display pin 6
+IO_PORT "anodos_out[3]" IO_TYPE=LVCMOS33 DRIVE=8 SLEW_RATE=SLOW;
+
+// --- TECLADO: FILAS (salidas, barrido activo en bajo) ---
+IO_LOC  "out_fil[3]" 55;
+IO_PORT "out_fil[3]" DRIVE=8 IO_TYPE=LVCMOS33;
+IO_LOC  "out_fil[2]" 54;
+IO_PORT "out_fil[2]" DRIVE=8 IO_TYPE=LVCMOS33;
+IO_LOC  "out_fil[1]" 53;
+IO_PORT "out_fil[1]" DRIVE=8 IO_TYPE=LVCMOS33;
+IO_LOC  "out_fil[0]" 51;
+IO_PORT "out_fil[0]" DRIVE=8 IO_TYPE=LVCMOS33;
+
+// --- RESET: botón S1 integrado en TangNano ---
+IO_LOC  "reset_n" 88;
+IO_PORT "reset_n" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
+// --- TECLADO: COLUMNAS (entradas, pull-up interno) ---
+IO_LOC  "in_col[3]" 69;
+IO_PORT "in_col[3]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_LOC  "in_col[2]" 68;
+IO_PORT "in_col[2]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_LOC  "in_col[1]" 57;
+IO_PORT "in_col[1]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_LOC  "in_col[0]" 56;
+IO_PORT "in_col[0]" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+
