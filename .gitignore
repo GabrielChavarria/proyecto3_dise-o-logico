@@ -1,0 +1,10 @@
+# Archivos generados por sintesis y place-and-route
+src/build/*.json
+src/build/*.log
+src/build/*.fs
+src/build/*.vcd
+src/build/*.o
+src/build/abc.history
+
+# Mantener el Makefile
+!src/build/Makefile
