@@ -2,7 +2,7 @@
 
 ## Frecuencia de operación
 - **Requerida**: 27 MHz (período 37 ns)
-- **Máxima reportada por nextpnr**: 95.43 MHz ✅
+- **Máxima reportada por nextpnr**: 122.06 MHz ✅
 
 ## Análisis de timing
 
@@ -10,8 +10,8 @@
 |---|---|
 | Frecuencia de operación | 27 MHz |
 | Período de reloj | 37 ns |
-| Frecuencia máxima alcanzada | 95.43 MHz |
-| Margen sobre la frecuencia objetivo | ~3.5× |
+| Frecuencia máxima alcanzada | 122.06 MHz |
+| Margen sobre la frecuencia objetivo | ~4.5× |
 | Resultado | **PASS** |
 
 ## Ruta crítica
@@ -29,5 +29,5 @@ grep -i "max\|freq\|mhz\|timing\|slack" pnr_tangnano9k.log
 
 Línea clave del log:
 ```
-Info: Max frequency for clock 'barrido.clk': 95.43 MHz (PASS at 27.00 MHz)
+Info: Max frequency for clock 'barrido.clk': 122.06 MHz (PASS at 27.00 MHz)
 ```
