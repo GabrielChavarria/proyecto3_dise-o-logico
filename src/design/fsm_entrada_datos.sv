@@ -30,6 +30,7 @@ module fsm_entrada_datos (
     logic [7:0] reg_a;   // temporal mayor para validar antes de guardar (max 199)
     logic [5:0] reg_b;   // temporal mayor para validar antes de guardar (max 39)
     logic       valid_next;
+    
 
     // Valores candidatos al agregar un nuevo digito
     logic [10:0] nuevo_a;  // reg_a*10 + digito (evita overflow en la comparacion)
