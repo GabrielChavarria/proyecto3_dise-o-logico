@@ -10,7 +10,7 @@
 module divisor_enteros #(  // el #( indica que tendra parametros configurables 
 
     parameter N = 6,  // define el parametro N que representa el numero de bits del dividendo, por defecto vale 6
-    parameter M = 4   // define el parametro N que representa el numero de bits del divisor, por defecto es 4
+    parameter M = 4   // define el parametro M que representa el numero de bits del divisor, por defecto es 4
 )(//  comienza la lista de puertos del modulo 
     input  logic         clk,//todos los registros se actualizan en el flanco postivo de esta señal
     input  logic         rst_n,// señal de reset activo en bajo, cuando vale cero reinicia los registros
