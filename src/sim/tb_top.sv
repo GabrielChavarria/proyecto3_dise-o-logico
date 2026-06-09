@@ -140,12 +140,12 @@ module tb_top;
 
         // Alternar con tecla C: cociente -> residuo -> cociente
         presionar(4'b1011, 4'b0111, "tecla_C (sel=residuo)");
-        if (dut.sel_resultado !== 1'b1) begin
+        if (dut.sel_disp.sel_resultado !== 1'b1) begin
             $display("[FAIL] sel_resultado no cambio a 1"); errores++;
         end else $display("[PASS] sel_resultado = 1 (mostrando residuo)");
 
         presionar(4'b1011, 4'b0111, "tecla_C (sel=cociente)");
-        if (dut.sel_resultado !== 1'b0) begin
+        if (dut.sel_disp.sel_resultado !== 1'b0) begin
             $display("[FAIL] sel_resultado no volvio a 0"); errores++;
         end else $display("[PASS] sel_resultado = 0 (mostrando cociente)");
 
